@@ -22,7 +22,7 @@ Run Condor dockers manually
 --------------
 
 <pre>
-docker run  -d --name=master2 dscnaf/htcondor-debian -m</pre>
+> docker run  -d --name=master2 dscnaf/htcondor-debian -m</pre>
 
 Using Marathon
 --------------
