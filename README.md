@@ -69,3 +69,8 @@ Executor json:
     }
   }
 }</pre>
+
+Docker problems (mail Marica)
+==================
+
+In /etc/condor/condor_config wrong path for "libexec"; correct one is /usr/lib/condor/libexec, current is /usr/libexec
