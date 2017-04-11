@@ -35,7 +35,7 @@ Master json:
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "dscnaf/htcondor-debian"
+      "image": "ciangom/htcondor-docker-debian"
     }
   }
 }</pre>
@@ -49,7 +49,7 @@ Submitter json:
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "dscnaf/htcondor-debian"
+      "image": "ciangom/htcondor-docker-debian"
     }
   }
 }</pre>
@@ -64,7 +64,7 @@ Executor json:
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "dscnaf/htcondor-debian",
+      "image": "ciangom/htcondor-docker-debian",
       "privileged": true
     }
   }
