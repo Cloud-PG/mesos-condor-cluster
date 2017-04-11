@@ -1,0 +1,11 @@
+parameters:
+ network: 60e011cc-7023-4eab-9566-28de0330bc00
+ ssh_key_name: MMM
+ master_flavor: m1.medium
+ loadbalancer_flavor: m1.small
+ slave_flavor: m1.large
+ marathon_username: admin
+ marathon_password: marathon
+ number_of_slaves: 2
+ number_of_masters: 1
+ server_image: 3654fe20-0f0e-468a-a4fe-e07264c00349
