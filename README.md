@@ -35,7 +35,11 @@ Master json:
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "ciangom/htcondor-docker-debian"
+      "image": "ciangom/htcondor-docker-debian",
+      "network": "BRIDGE",
+      "portMappings": [
+        {"containerPort": 9618, "hostPort": 3133}
+      ]
     }
   }
 }</pre>
