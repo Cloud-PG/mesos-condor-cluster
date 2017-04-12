@@ -78,3 +78,6 @@ Docker problems (mail Marica)
 ==================
 
 In /etc/condor/condor_config wrong path for "libexec"; correct one is /usr/lib/condor/libexec, current is /usr/libexec
+
+
+Update: Riesco a specificare le porte e gli indirizzi, ma lo schedd cerca di collegarsi all'indirizzo locale del master (172. ecc) mentre il master è in ascolto sull'indirizzo ip dell'host. Da risolvere
