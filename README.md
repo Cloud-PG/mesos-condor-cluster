@@ -83,3 +83,5 @@ In /etc/condor/condor_config wrong path for "libexec"; correct one is /usr/lib/c
 
 
 Update: Riesco a specificare le porte e gli indirizzi, ma lo schedd cerca di collegarsi all'indirizzo locale del master (172. ecc) mentre il master è in ascolto sull'indirizzo ip dell'host. Da risolvere
+
+Update2: Risolto problema porte. Rimodificato il condor_config riguardo alle policy di ALLOW
