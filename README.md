@@ -76,6 +76,34 @@ Executor json:
   }
 }</pre>
 
+Tests
+==================
+
+From the slave containing schedd-docker:
+
+<pre>root@mesos-s1:~# docker exec -it "schedd-docker-id" bash
+
+root@f329f012e05f:/# apt-get install vim -y
+root@f329f012e05f:/# useradd -m -s /bin/bash asd
+root@f329f012e05f:/# su - asd
+
+asd@f329f012e05f:~$ vim sleep.sh
+#!/bin/bash
+/bin/sleep 20
+asd@f329f012e05f:~$ vim sleep.sub
+executable              = sleep.sh
+log                     = sleep.log
+output                  = outfile.txt
+error                   = errors.txt
+should_transfer_files   = Yes
+when_to_transfer_output = ON_EXIT
+queue
+
+asd@f329f012e05f:~$ condor_status
+asd@f329f012e05f:~$ condor_submit sleep.sub
+asd@f329f012e05f:~$ condor_q
+asd@f329f012e05f:~$ condor_status</pre>
+
 Docker problems (mail Marica)
 ==================
 
