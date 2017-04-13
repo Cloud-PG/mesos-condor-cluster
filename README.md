@@ -38,7 +38,7 @@ Master json:
       "image": "ciangom/htcondor-docker-debian",
       "network": "BRIDGE",
       "portMappings": [
-        {"containerPort": 9618, "hostPort": 3133}
+        {"containerPort": 9618, "servicePort": 9618}
       ]
     }
   }
@@ -47,13 +47,14 @@ Master json:
 Submitter json:
 <pre>{
   "id": "htcondor-submitter-debian",
-  "args": ["-s", "MASTER_IP_ADDRESS"],
+  "args": ["-s", "192.168.150.65"],
   "cpus": 1,
   "mem": 512.0,
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "ciangom/htcondor-docker-debian"
+      "image": "ciangom/htcondor-docker-debian",
+      "network": "BRIDGE"
     }
   }
 }</pre>
@@ -61,7 +62,7 @@ Submitter json:
 Executor json:
 <pre>{
   "id": "htcondor-executor-debian",
-  "args": ["-e", "MASTER_IP_ADDRESS"],
+  "args": ["-e", "192.168.150.65"],
   "cpus": 1,
   "mem": 512.0,
   "instances": 3,
@@ -69,7 +70,8 @@ Executor json:
     "type": "DOCKER",
     "docker": {
       "image": "ciangom/htcondor-docker-debian",
-      "privileged": true
+      "privileged": true,
+      "network": "BRIDGE"
     }
   }
 }</pre>
