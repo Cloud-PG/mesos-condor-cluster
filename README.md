@@ -1,7 +1,7 @@
 Complete Condor batch system on Mesos cluster
 =========
 
-How to deploy AMS Condor cluster within a Mesos cluster on Openstack via Heat
+How to deploy a Condor cluster within a Mesos cluster on Openstack via Heat
 
 
 Via CLI
