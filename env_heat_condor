@@ -9,3 +9,4 @@ parameters:
  number_of_slaves: 2
  number_of_masters: 1
  server_image: 
+ public_key_url: 
