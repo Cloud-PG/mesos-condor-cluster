@@ -174,7 +174,7 @@ resources:
     properties:
       count: 2
       resource_def:
-        type: https://raw.githubusercontent.com/Cloud-PG/mesos-cluster/devel/heat-templates-v2/loadbalancer.yaml
+        type: https://raw.githubusercontent.com/Cloud-PG/mesos-condor-cluster/master/heat-templates-v2/loadbalancer.yaml
         properties:
           server_name: lb%index%
           ssh_key_name: {get_param: ssh_key_name}
@@ -196,7 +196,7 @@ resources:
       inputs:
       - name: role_list
         type: CommaDelimitedList 
-      config: { get_file: 'https://raw.githubusercontent.com/Cloud-PG/mesos-cluster/devel/heat-templates-v2/setup.sh' }
+      config: { get_file: 'https://raw.githubusercontent.com/Cloud-PG/mesos-condor-cluster/master/heat-templates-v2/setup.sh' }
 
    
   ######################################################################
@@ -272,7 +272,7 @@ resources:
     properties:
       count: {get_param: number_of_masters}
       resource_def:
-         type: https://raw.githubusercontent.com/Cloud-PG/mesos-cluster/devel/heat-templates-v2/mesosnode.yaml
+         type: https://raw.githubusercontent.com/Cloud-PG/mesos-condor-cluster/master/heat-templates-v2/mesosnode.yaml
          properties: 
             server_name: mesos-m%index%
             ssh_key_name: {get_param: ssh_key_name}
@@ -340,7 +340,7 @@ resources:
     properties:
       count: {get_param: number_of_slaves}
       resource_def:
-        type: https://raw.githubusercontent.com/Cloud-PG/mesos-cluster/devel/heat-templates-v2/mesosnode.yaml
+        type: https://raw.githubusercontent.com/Cloud-PG/mesos-condor-cluster/master/heat-templates-v2/mesosnode.yaml
         properties:
           server_name: mesos-s%index%
           ssh_key_name: {get_param: ssh_key_name}
@@ -404,7 +404,7 @@ resources:
     type: OS::Heat::ResourceGroup
     properties:
       resource_def:
-        type: https://raw.githubusercontent.com/Cloud-PG/mesos-cluster/devel/heat-templates-v2/mesosnode.yaml
+        type: https://raw.githubusercontent.com/Cloud-PG/mesos-condor-cluster/master/heat-templates-v2/mesosnode.yaml
         properties:
           server_name: mesos-condor-cm
           ssh_key_name: {get_param: ssh_key_name}
@@ -470,7 +470,7 @@ resources:
     type: OS::Heat::ResourceGroup
     properties:
       resource_def:
-        type: https://raw.githubusercontent.com/Cloud-PG/mesos-cluster/devel/heat-templates-v2/mesosnode.yaml
+        type: https://raw.githubusercontent.com/Cloud-PG/mesos-condor-cluster/master/heat-templates-v2/mesosnode.yaml
         properties:
           server_name: mesos-condor-schedd
           ssh_key_name: {get_param: ssh_key_name}
